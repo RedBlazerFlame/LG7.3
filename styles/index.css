@@ -44,6 +44,11 @@ body > main {
     /* For Layouting */
     grid-area: main;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     /* Setting Colors */
     background-color: var(--color-second);
     color: var(--color-fifth);
@@ -61,4 +66,44 @@ body > footer {
     /* Setting Colors */
     background-color: var(--color-fifth);
     color: var(--color-second);
+}
+
+div.siteDescription {
+    /* For Layouting */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.linkContainer {
+    /* For Layouting */
+    flex-grow: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.linkWithIcon {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.linkWithIcon > div.icon {
+    background: url('../images/icons.png') no-repeat -412px -91px;
+    width: 32px;
+    height: 33px;
+
+    /* Here I was trying to make the background color fade out, and instead it did a sliding animation */
+    /* I decided to keep this transition property here because the sliding background is quite trippy */
+    transition: background 1s;
+}
+
+a.linkWithIcon:hover > div.icon {
+    background: url('../images/icons.png') no-repeat -412px -16px;
+	width: 32px;
+	height: 33px;
 }
