@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    /* Color Scheme */
+    /* Color Palette Retrieved from: https://coolors.co/000814-001d3d-003566-ffc300-ffd60a */
+    --color-first: #000814;
+    --color-second: #001d3d;
+    --color-third: #003566;
+    --color-fourth: #ffc300;
+    --color-fifth: #ffd60a;
+
+    /* Setting the Root Font Size */
+    font-size: 16px;
+}
+
+body {
+    /* For Layouting */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 20%;
+    grid-template-areas: 
+    "main"
+    "footer"
+    ;
+
+    /* This will ensure that the elements take up the entirety of the browser window */
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body > * {
+    /* Setting a Padding on immediate children of the body element so that it looks a bit easier on the eyes */
+    padding: 20px;
+}
+
+body > main {
+    /* For Layouting */
+    grid-area: main;
+
+    /* Setting Colors */
+    background-color: var(--color-second);
+    color: var(--color-fifth);
+}
+
+body > footer {
+    /* For Layouting */
+    grid-area: footer;
+
+    /* Making the copyright notice appear at the bottom of the footer element */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    /* Setting Colors */
+    background-color: var(--color-fifth);
+    color: var(--color-second);
+}
